@@ -1,9 +1,9 @@
-const startBtn = document.getElementById("start-btn");
-const startScreen = document.getElementById("start-screen");
-const difficultyMenu = document.getElementById("difficulty-menu");
+const strBtn = document.getElementById("start-btn");
+const strScr = document.getElementById("start-screen");
+const diffMenu = document.getElementById("difficulty-menu");
 const gameArea = document.getElementById("game-area");
 const board = document.getElementById("game-board");
-const restartBtn = document.getElementById("restart-btn");
+const rstBtn = document.getElementById("restart-btn");
 const menuBtn = document.getElementById("menu-btn");
 const statusText = document.getElementById("status");
 
@@ -21,26 +21,26 @@ function shuffle(arr) {
 }
 
 
-startBtn.addEventListener("click", () => {
-  startScreen.classList.add("hidden");
-  difficultyMenu.classList.remove("hidden");
+strBtn.addEventListener("click", () => {
+  strScr.classList.add("hidden");
+  diffMenu.classList.remove("hidden");
 });
 
 
 document.querySelectorAll(".difficulty").forEach(btn => {
   btn.addEventListener("click", () => {
-    difficultyMenu.classList.add("hidden");
+    diffMenu.classList.add("hidden");
     gameArea.classList.remove("hidden");
     startGame(btn.dataset.level);
   });
 });
 
 
-restartBtn.addEventListener("click", () => startGame(currentLevel));
+rstBtn.addEventListener("click", () => startGame(currentLevel));
 
 menuBtn.addEventListener("click", () => {
   gameArea.classList.add("hidden");
-  startScreen.classList.remove("hidden");
+  strScr.classList.remove("hidden");
   statusText.textContent = "";
   board.innerHTML = "";
 });
