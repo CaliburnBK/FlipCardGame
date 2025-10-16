@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Match Game</title>
+  <link rel="stylesheet" href="GameStyle.css" />
+</head>
+<body>
+  <h1>🧩 Memory Match Game</h1>
+
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <button id="start-btn">Start Game</button>
+  </div>
+
+  <!-- Difficulty Menu -->
+  <div id="difficulty-menu" class="hidden">
+    <h2>Select Difficulty</h2>
+    <button class="difficulty" data-level="easy">Easy</button>
+    <button class="difficulty" data-level="medium">Medium</button>
+    <button class="difficulty" data-level="hard">Hard</button>
+  </div>
+
+  <!-- Game Area -->
+  <div id="game-area" class="hidden">
+    <div id="game-board"></div>
+
+    <div id="controls">
+      <button id="restart-btn">Restart</button>
+      <button id="menu-btn">Back to Menu</button>
+    </div>
+
+    <p id="status"></p>
+  </div>
+
+  <script src="GameScript.js"></script>
+</body>
+</html>
